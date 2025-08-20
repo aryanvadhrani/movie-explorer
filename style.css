@@ -1,0 +1,187 @@
+body{
+    background-color: black;
+}
+*{
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: "Arimo", sans-serif;
+}
+.default-message{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    gap: 20px;
+}
+.default-message img{
+    width: 100%;
+    border-radius:10px ;
+}
+.navbar-section{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 3px;
+    padding: 0.9rem;
+    background: rgba(31, 30, 30, 0.422);
+    position: sticky;
+    top: 0px;
+    z-index: 999;
+}
+.title{
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: white;
+    line-height: 1.5;
+}
+#SearchInput{   
+    padding: 0.4rem 1rem 0.4rem 0.3rem;
+    background: #0f0f0f;
+    border: 1px solid rgb(109, 103, 103);
+    border-radius: 5px;
+}
+#SearchInput::placeholder{
+    color: rgb(218, 213, 213);
+    font-size: 0.8rem;
+}
+.search-section{
+    display: flex;
+    gap: 7px;
+}
+.search-btn{
+    background-color: red;
+    border: none;
+    padding: 0.4rem 1rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    color: white;
+    letter-spacing: 1px;
+    opacity: 1;
+    transition: opacity 0.2s ease;
+    font-weight: 600;
+}
+.search-btn:hover{
+    opacity: 0.7;
+}
+.movie-main-section{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4rem;
+    width: 100%;
+    overflow: hidden;
+}
+
+.movie-container{
+   display: none;
+   align-items: center;
+   gap: 1rem;
+   width: 60%;
+   background: rgba(70, 70, 70, 0.196);
+   backdrop-filter: blur(8px);
+   border: 1px solid rgba(255, 255, 255, 0.1);
+   border-radius: 5px;
+}
+.movie-section-one{
+    flex-shrink: 0;
+}
+.movie-section-one img{
+    width: 100%;
+}
+.movieImg:hover{
+    transform: scale(40px);
+}
+.movie-section-two{
+    flex-grow: 1;
+}
+.movie-title{
+    text-align: center;
+    color: #f2f2f2;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-top: 1rem;
+    letter-spacing: 1px;
+}
+.rating{
+    font-size: 0.8rem;
+    text-align: center;
+    margin-top: 0.7rem;
+    color: #ffe369;
+    font-weight: normal;
+}
+.about-movie-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    gap: 5px;
+}
+.about-movie{
+    background: linear-gradient(
+    to bottom right,
+    rgba(140, 82, 255, 0.1),  
+    rgba(72, 219, 251, 0.1)  
+  );
+  padding: 0.4rem 1rem;
+  border-radius: 5px;
+  color: #ffffffb3;
+  font-size: 0.9rem;
+}
+.movie-details{
+    margin-top: 1.5em;
+}
+.release-date , .duration{
+    color: #999999;
+    font-size: 0.85rem;
+    font-weight: 400;
+    margin-top: 1rem;
+    letter-spacing: 1px;
+}
+.plot{
+    color: #aaaaaa;
+    font-size: 0.85rem;
+    margin-top: 1rem;
+}
+@media screen and (max-width:1024px) {
+    .movie-container{
+        width: 90%;
+        gap: 0.5rem;
+    }
+}
+@media screen and (max-width:768px) {
+    .movie-container{
+        width: 95%;
+    }
+}
+@media screen and (max-width:610px) {
+    .movie-container{
+        flex-wrap: wrap;
+    }
+    .movie-section-one img{
+        padding-top:0.6rem ;
+    }
+    .movie-details{
+        padding-left: 0.5rem;
+    }
+}
+@media screen and (max-width:450px){
+    .navbar-section{
+        padding: 0.8rem 0.3rem;
+    }
+    #SearchInput{
+        width: 120px;
+    }
+    .search-btn{
+        padding: 0.4rem 0.5rem;
+    }
+    .title{
+        font-size: 0.9rem;
+    }
+    
+}
+.error-box{
+    color: white;
+    font-size: 2rem;
+}
